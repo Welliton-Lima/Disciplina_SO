@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>TAMANHO DA MEMÓRIA</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>QUANTIDADE DE PROGRAMAS</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>METODO</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Simular">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>100</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Simular</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Passo_a_Passo">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>160</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PASSO A PASSO</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>431</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>1- SELECIONE AS OPÇÕES, CLICK NO BOTÃO SIMULAR PARA INICIAR.</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>431</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>2- AO INICIAR CLICK NO BOTÃO PASSO A PASSO</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Giga_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>1 GIGA</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Gigas_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>120</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>2 GIGAS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Gigas_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>81</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>3 GIGAS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Gigas_4">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>150</y>
+      <width>81</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>4 GIGAS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Primeiro_encaixe">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>161</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>Primeiro encaixe</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Pior_encaixe">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>226</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>Pior encaixe</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Melhor_encaixe">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>Melhor encaixe</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>40</y>
+      <width>341</width>
+      <height>441</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Manual">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>320</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Manual</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="setTAM_prog">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="setTEMPO_prog">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_TAM_prog">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>TAMANHO</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_TEMPO">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>TEMPO</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Proximo">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>390</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PROXIMO</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>43</y>
+      <width>431</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>3- TAMANHO E TEMPO DO PROCESSO SÃO ADICIONADOS AUTOMATICAMENTE</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>62</y>
+      <width>431</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>4- PARA PERSONALIZAR TEMPO E TAMANHO CLICK EM MANUAL E DEPOIS EM SIMULAR</string>
+    </property>
+    <property name="margin">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>-4</x>
+      <y>2</y>
+      <width>811</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">MainWindow{
+	imagem: url(:/imagem/fundo.jpg)
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>5</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>                                              MEMÓRIA</string>
+    </property>
+   </widget>
+   <zorder>label_8</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>Simular</zorder>
+   <zorder>Passo_a_Passo</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>Giga_1</zorder>
+   <zorder>Gigas_2</zorder>
+   <zorder>Gigas_3</zorder>
+   <zorder>Gigas_4</zorder>
+   <zorder>Primeiro_encaixe</zorder>
+   <zorder>Pior_encaixe</zorder>
+   <zorder>Melhor_encaixe</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>listWidget</zorder>
+   <zorder>Manual</zorder>
+   <zorder>setTAM_prog</zorder>
+   <zorder>setTEMPO_prog</zorder>
+   <zorder>label_TAM_prog</zorder>
+   <zorder>label_TEMPO</zorder>
+   <zorder>Proximo</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_9</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,37 @@
+#include "memoria.h"
+
+#ifndef MEMORIA_H_INCLUDED
+#define MEMORIA_H_INCLUDED
+#include "lista.h"
+
+using namespace std;
+
+struct Bloco_memoria
+{
+    float TAM_bloco;
+    int tempo;
+    bool disponivel;
+    string nome_programa;
+};
+
+void imprime_particao(Bloco_memoria particao);
+
+bool unir_particao(TLista<Bloco_memoria> &Lista,Bloco_memoria programa,int opc);
+
+void imprime_memoria(TLista<Bloco_memoria> &Lista);
+
+bool Primeiro_encaixe(TLista<Bloco_memoria> &Lista,Bloco_memoria programa);
+
+bool Pior_encaixe(TLista<Bloco_memoria> &Lista,Bloco_memoria programa);
+
+bool Melhor_encaixe(TLista<Bloco_memoria> &Lista,Bloco_memoria programa);
+
+void tempo_processamento(TLista<Bloco_memoria> &Lista);
+
+int tempo_processamento1(TLista<Bloco_memoria> &Lista);
+
+
+
+
+
+#endif // MEMORIA_H_INCLUDED
