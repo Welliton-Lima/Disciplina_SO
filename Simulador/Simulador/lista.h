@@ -145,7 +145,7 @@ bool Lista_Remover_posicao(TLista<TIPO> &Lista,int posicao)
 {
     TElemento<TIPO> *temp = Lista.inicio;
     TElemento<TIPO> *temp2 = temp->proximo;
-    for(int i=0; i<(posicao-1); i++)
+    for(int i=0; i<posicao; i++)
     {
         temp = temp->proximo;
         temp2= temp->proximo;
@@ -156,6 +156,7 @@ bool Lista_Remover_posicao(TLista<TIPO> &Lista,int posicao)
     }
     else{
        temp->proximo=temp2->proximo;
+       temp2->proximo=NULL;
         delete temp2;
     }
     return true;
@@ -164,7 +165,7 @@ bool Lista_Remover_posicao(TLista<TIPO> &Lista,int posicao)
 template <typename TIPO>
 bool  unir_particao(TLista<TIPO> &Lista,TIPO programa,int opc)
 {
-    int proximo=-1,indice=0,indice_atual=0,indice_final=0,indice_inicial=0,TAM_Bloco=-1,bloco_atual=0,check=0;
+    int proximo=-1,indice=1,indice_atual=0,indice_final=0,indice_inicial=0,TAM_Bloco=-1,bloco_atual=0,check=0;
     TElemento<TIPO> *nav = Lista.inicio;
 
     while(proximo != 1)
@@ -216,12 +217,7 @@ bool  unir_particao(TLista<TIPO> &Lista,TIPO programa,int opc)
     if(TAM_Bloco >= 0){
         indice_atual = indice_inicial;
         indice = indice_final;
-        for(int i = 0; i<indice; i++)
-        {
-            Lista_Remover_posicao(Lista,indice_atual);
-        }
-        Lista_Inserir_posicao(Lista,programa,indice_atual);
-
+        Lista_Inserir_posicao(Lista,programa,indice);
         if(TAM_Bloco > 0)
         {
             TIPO Memoria;
@@ -229,7 +225,11 @@ bool  unir_particao(TLista<TIPO> &Lista,TIPO programa,int opc)
             Memoria.setNome_programa("FRAGMENTO");
             Memoria.setTAM_bloco(TAM_Bloco);
             Memoria.setTempo(0);
-            Lista_Inserir_posicao(Lista,Memoria,indice);
+            Lista_Inserir_posicao(Lista,Memoria,indice+1);
+        }
+        for(int i = 0; i<indice; i++)
+        {
+            Lista_Remover_posicao(Lista,indice_atual);
         }
     }
     if(check == 0){
@@ -237,7 +237,7 @@ bool  unir_particao(TLista<TIPO> &Lista,TIPO programa,int opc)
     }
     else{
         return true;
-    }
+   }
 }
 
 template <typename TIPO>

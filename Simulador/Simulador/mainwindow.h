@@ -13,7 +13,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 protected:
-    int TAM_memoria,metodo,qnt_programa,qnt,proximo,i,TAM;;
+    int TAM_memoria,metodo,qnt_programa,qnt,proximo,i,TAM;
     bool TAM_check,metodo_check,manual,check;
     vector<Bloco_memoria> blocos;
     Bloco_memoria p;
@@ -47,6 +47,8 @@ private slots:
     void on_Manual_clicked();
 
     void on_Proximo_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -150,6 +150,12 @@
     <property name="text">
      <string>1 GIGA</string>
     </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QCheckBox" name="Gigas_2">
     <property name="geometry">
@@ -432,6 +438,19 @@
      <string>                                              MEMÓRIA</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RESET</string>
+    </property>
+   </widget>
    <zorder>label_8</zorder>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
@@ -458,6 +477,7 @@
    <zorder>label_6</zorder>
    <zorder>label_7</zorder>
    <zorder>label_9</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

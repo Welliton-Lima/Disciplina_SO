@@ -38,6 +38,7 @@ void MainWindow::on_Giga_1_clicked()
         ui->Gigas_3->setEnabled(false);
         ui->Gigas_4->setEnabled(false);
         TAM_memoria=1000;
+        TAM=1000;
         TAM_check=false;
     }
     else if(proximo == 0){
@@ -55,6 +56,7 @@ void MainWindow::on_Gigas_2_clicked()
         ui->Gigas_3->setEnabled(false);
         ui->Gigas_4->setEnabled(false);
         TAM_memoria=2000;
+        TAM=2000;
         TAM_check=false;
     }
     else if(proximo == 0){
@@ -73,6 +75,7 @@ void MainWindow::on_Gigas_3_clicked()
         ui->Gigas_2->setEnabled(false);
         ui->Gigas_4->setEnabled(false);
         TAM_memoria=3000;
+        TAM=3000;
         TAM_check=false;
     }
     else if(proximo == 0){
@@ -91,6 +94,7 @@ void MainWindow::on_Gigas_4_clicked()
         ui->Gigas_2->setEnabled(false);
         ui->Gigas_3->setEnabled(false);
         TAM_memoria=4000;
+        TAM=4000;
         TAM_check=false;
     }
     else if(proximo == 0){
@@ -168,12 +172,12 @@ void MainWindow::on_Simular_clicked()
         ui->lineEdit->setEnabled(false);
         ui->Simular->setEnabled(false);
         ui->Passo_a_Passo->setEnabled(true);
-
+        ui->Manual->setEnabled(false);
+        ui->Proximo->setEnabled(false);
         ui->Giga_1->setEnabled(false);
         ui->Gigas_2->setEnabled(false);
         ui->Gigas_3->setEnabled(false);
         ui->Gigas_4->setEnabled(false);
-        TAM=TAM_memoria;
         qnt=qnt_programa;
         if(manual ==false){
             while(i<qnt){
@@ -200,7 +204,6 @@ void MainWindow::on_Passo_a_Passo_clicked()
 {
     ui->Passo_a_Passo->setEnabled(false);
     srand(time(NULL));
-    nav = memoria.inicio;
     proximo=0;
 
     if(qnt_programa > 0)
@@ -229,9 +232,10 @@ void MainWindow::on_Passo_a_Passo_clicked()
                 TAM_memoria = TAM_memoria - blocos.at(i).getTAM_bloco();
                 TAM_memoria = TAM_memoria + tempo_processamento1(memoria);
                 qnt_programa = qnt_programa-1;
-                i=i+1;;
+                i=i+1;
             }
             ui->listWidget->clear();
+            nav = memoria.inicio;
             while(nav != NULL){
                     ui->listWidget->addItem("__________________________________________________________________");
                     ui->listWidget->addItem(QString::fromStdString(nav->dado.getNome_programa()));
@@ -243,6 +247,7 @@ void MainWindow::on_Passo_a_Passo_clicked()
                     }
         }
     else{
+        nav = memoria.inicio;
         ui->listWidget->clear();
         TAM_memoria= TAM_memoria+tempo_processamento1(memoria);
         while(nav != NULL){
@@ -251,10 +256,10 @@ void MainWindow::on_Passo_a_Passo_clicked()
                 ui->listWidget->addItem(QString::fromStdString("\tTAMANHO: ")+QString::number(nav->dado.getTAM_bloco())+QString::fromStdString(" MegaBytes"));
                 ui->listWidget->addItem(QString::fromStdString("\tTEMPO: ")+QString::number(nav->dado.getTempo()));
                 ui->listWidget->addItem("__________________________________________________________________\n");
+                proximo++;
               nav=nav->proximo;
         }
         if(TAM_memoria == TAM){
-            ui->Passo_a_Passo->setEnabled(false);
             ui->lineEdit->setEnabled(true);
             ui->Simular->setEnabled(true);
             ui->Manual->setEnabled(true);
@@ -295,6 +300,7 @@ void MainWindow::on_Proximo_clicked()
         ui->setTAM_prog->setEnabled(false);
         ui->setTEMPO_prog->setEnabled(false);
         ui->Proximo->setEnabled(false);
+        ui->Simular->setEnabled(true);
         i=0;
     }
 }
@@ -309,6 +315,7 @@ void MainWindow::on_Manual_clicked()
         qnt_programa = ui->lineEdit->text().toInt();
         manual=true;
         ui->Manual->setEnabled(false);
+        ui->Simular->setEnabled(false);
         ui->setTEMPO_prog->setEnabled(true);
         ui->setTAM_prog->setEnabled(true);
         ui->Proximo->setEnabled(true);
@@ -321,3 +328,31 @@ void MainWindow::on_Manual_clicked()
     }
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    TAM_check=true,TAM_memoria=0,metodo_check=true,i=0,check=true,manual=false,metodo=0,qnt=0,proximo=0;
+    ui->Passo_a_Passo->setEnabled(false);
+    ui->lineEdit->setEnabled(true);
+    ui->listWidget->clear();
+    ui->Manual->setEnabled(true);
+    ui->Proximo->setEnabled(true);
+    ui->Proximo->setEnabled(false);
+    ui->setTEMPO_prog->setEnabled(false);
+    ui->setTAM_prog->setEnabled(false);
+    ui->Primeiro_encaixe->setEnabled(true);
+    ui->Pior_encaixe->setEnabled(true);
+    ui->Melhor_encaixe->setEnabled(true);
+    ui->Primeiro_encaixe->setChecked(false);
+    ui->Pior_encaixe->setChecked(false);
+    ui->Melhor_encaixe->setChecked(false);
+    ui->Simular->setEnabled(true);
+    ui->Giga_1->setEnabled(true);
+    ui->Gigas_2->setEnabled(true);
+    ui->Gigas_3->setEnabled(true);
+    ui->Gigas_4->setEnabled(true);
+    ui->Giga_1->setChecked(false);
+    ui->Gigas_2->setChecked(false);
+    ui->Gigas_3->setChecked(false);
+    ui->Gigas_4->setChecked(false);
+}
